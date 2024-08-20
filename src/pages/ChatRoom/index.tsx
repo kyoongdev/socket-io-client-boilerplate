@@ -19,10 +19,10 @@ const ChatRoomPage: React.FC = () => {
   return (
     <BaseLayout className={styles.wrapper}>
       <section className={styles.container}>
-        <h2>채팅방 Id</h2>
+        <h2>Chat Room Id</h2>
         <Input className={styles.input} value={chatRoomId} onChange={onChange} />
         <Button size="sm" onClick={() => navigate('chat')}>
-          채팅 시작
+          Start Chatting
         </Button>
       </section>
     </BaseLayout>

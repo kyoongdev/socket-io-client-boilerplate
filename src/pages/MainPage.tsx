@@ -18,17 +18,17 @@ const MainPage: React.FC = () => {
     <BaseLayout className={styles.wrapper}>
       <section className={styles.container}>
         <article className={styles.server}>
-          <h2>서버 URL 입력</h2>
+          <h2>Server URL</h2>
           <Input className={styles.input} value={serverUrl} onChange={onChange} />
         </article>
         <footer className={styles.footer}>
-          <h2>채팅방 유무 선택</h2>
+          <h2>Does Chat Room Exists?</h2>
           <div className={styles.buttons}>
             <Button size="sm" disabled={serverUrl.length === 0} onClick={() => navigate('/chat-room')}>
-              채팅방 있음
+              Yes
             </Button>
-            <Button size="sm" disabled={serverUrl.length === 0}>
-              채팅방 없음
+            <Button size="sm" disabled={serverUrl.length === 0} onClick={() => navigate('/chat')}>
+              No
             </Button>
           </div>
         </footer>

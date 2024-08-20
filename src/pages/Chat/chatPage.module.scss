@@ -5,11 +5,35 @@
   @include m.flex(flex-start, center, column);
   width: 100dvw;
   height: 100dvh;
-  background-color: c.$C_PRIMARY_DEFAULT;
+  background-color: c.$C_PRIMARY_WHITE;
   position: relative;
 
   > h1 {
     @include m.fontH1;
     margin-top: 20px;
+  }
+
+  .info {
+    @include m.flex(flex-start, flex-start, column);
+    width: 50%;
+
+    padding: 20px;
+    border: 2px solid c.$C_PRIMARY_DEFAULT;
+
+    border-radius: 12px;
+    row-gap: 12px;
+    margin-top: 24px;
+
+    > h2 {
+      @include m.fontH2;
+    }
+
+    .eventName {
+      width: 100%;
+    }
+
+    .json {
+      width: 100%;
+    }
   }
 }

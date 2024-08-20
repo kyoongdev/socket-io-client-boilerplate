@@ -15,7 +15,7 @@
   .container {
     @include m.flex(center, center, column);
     row-gap: 40px;
-    width: 40%;
+    width: 50%;
     padding: 20px;
     background-color: c.$C_PRIMARY_WHITE;
 
@@ -37,8 +37,9 @@
     width: 100%;
     row-gap: 12px;
     .buttons {
-      @include m.flex(space-between, center, row);
+      @include m.flex(flex-start, center, row);
       width: 100%;
+      column-gap: 20px;
     }
   }
 }
