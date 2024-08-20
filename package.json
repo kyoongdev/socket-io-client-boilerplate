@@ -1,5 +1,5 @@
 {
-  "name": "charan-operation-web",
+  "name": "socket-io-client-boilerplate",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

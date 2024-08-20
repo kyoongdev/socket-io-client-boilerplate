@@ -1,7 +1,7 @@
 import React from 'react';
 import BaseLayout from 'src/components/Layout/BaseLayout';
 
-import styles from './chatRoom.module.scss';
+import styles from './chatRoomPage.module.scss';
 import Input from 'src/components/Common/Input';
 import Button from 'src/components/Common/Button';
 import { useRecoilState } from 'recoil';
