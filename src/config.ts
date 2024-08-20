@@ -13,6 +13,4 @@ const getConfig = (name: string) => {
 export default {
   ENV: getConfig('ENV'),
   PUBLIC_URL: getConfig('PUBLIC_URL'),
-  API_KEY: getConfig('API_KEY') as string,
-  SHEET_ID: getConfig('SHEET_ID') as string,
 };
