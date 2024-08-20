@@ -1,0 +1,12 @@
+@use 'src/styles/constants' as c;
+
+@mixin baseHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: c.$S_HEADER_HEIGHT;
+  padding-right: c.$S_PAGE_HORIZONTAL_GAP;
+  padding-left: c.$S_PAGE_HORIZONTAL_GAP;
+}

@@ -1,0 +1,42 @@
+@use 'src/styles/constants' as c;
+@use 'src/styles/mixins' as m;
+
+.wrapper {
+  @include m.flex;
+  @include m.fontC1;
+  color: c.$C_PRIMARY_DEFAULT;
+  cursor: pointer;
+  user-select: none;
+  background-color: c.$C_PRIMARY_DEFAULT;
+  border: 0;
+  color: c.$C_PRIMARY_WHITE;
+  border-radius: 12px;
+  outline: none;
+  padding: 24px 40px;
+  font-size: 24px;
+  font-weight: 700;
+
+  &.sm {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  &.mid {
+    padding: 16px 32px;
+    font-size: 20px;
+  }
+
+  &.primary {
+    &:active {
+      color: c.$C_PRIMARY_DEFAULT;
+      background-color: c.$C_PRIMARY_WHITE;
+    }
+    &:disabled {
+      background-color: c.$C_GRAY_2;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

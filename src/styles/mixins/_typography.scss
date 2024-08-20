@@ -1,0 +1,177 @@
+@use 'src/styles/constants' as c;
+
+// NOTE: HEADING
+@mixin fontH1 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 34px;
+}
+
+@mixin fontH2 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+@mixin fontH3 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+@mixin fontH4 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+@mixin fontH5 {
+  color: c.$C_PRIMARY_DARK;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+@mixin fontH6 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+// NOTE: BODY
+@mixin fontBL1 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+@mixin fontBL2 {
+  color: c.$C_PRIMARY_DARK;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+@mixin fontBM1 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 17px;
+}
+
+@mixin fontBM2 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 17px;
+}
+
+@mixin fontBN1 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 14px;
+}
+
+@mixin fontBN2 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 14px;
+}
+
+@mixin fontBS {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 10px;
+}
+
+// NOTE: CAPTION
+@mixin fontC1 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+@mixin fontC2 {
+  font-family: 'NotoSansKR';
+  color: c.$C_PRIMARY_DARK;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 17px;
+}
+
+// NOTE: LINK
+@mixin fontL1 {
+  font-family: 'NotoSansKR';
+  color: c.$C_TEXT_TITLE;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+@mixin fontL2 {
+  font-family: 'NotoSansKR';
+  color: c.$C_TEXT_TITLE;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 17px;
+}
+
+@mixin fontU {
+  font-family: 'NotoSansKR';
+  text-decoration: underline;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 120%;
+}
+
+@mixin textEllipsis($lines: 1) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  @if $lines > 1 {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}

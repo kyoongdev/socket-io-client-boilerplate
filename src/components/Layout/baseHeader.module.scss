@@ -1,0 +1,50 @@
+@use 'src/styles/constants' as c;
+@use 'src/styles/mixins' as m;
+
+.wrapper {
+  @include m.flex(flex-start, center, row);
+  @include m.fontH2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: c.$S_HEADER_HEIGHT;
+  padding: 40px 20px;
+  background-color: c.$C_PRIMARY_DEFAULT;
+
+  > svg {
+    cursor: pointer;
+  }
+
+  > h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    word-break: keep-all;
+    white-space: pre;
+    color: c.$C_PRIMARY_WHITE;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &.isFixed {
+    position: fixed;
+    top: 0;
+    height: calc(c.$S_HEADER_HEIGHT + c.$S_CONTENT_TOP_GAP);
+    padding: c.$S_CONTENT_TOP_GAP 44px 0;
+
+    :is(.left, .right) {
+      transform: translateY(calc(-50% + c.$S_CONTENT_TOP_GAP / 2));
+    }
+  }
+
+  &:is(.isFixed, .hasBorderBottom) {
+    padding-bottom: 16px;
+
+    :is(.left, .right) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
